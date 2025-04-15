@@ -8,8 +8,6 @@ COPY . /app
 
 RUN pip install --no-cache-dir prometheus_client requests
 
-EXPOSE 8000
-
 ENV ACCES_KEY="access_key"
 ENV SECRET_KEY="secret_key"
 ENV APP_KEY="app_key"

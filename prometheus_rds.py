@@ -3,6 +3,7 @@ import time
 import requests
 import base64
 from datetime import datetime, timedelta
+import os
 
 # NHN Cloud API Key 설정
 ACCESS_KEY = os.getenv("ACCESS_KEY", "default_access_key")
@@ -111,8 +112,9 @@ def fetch_and_update_metrics():
 
 if __name__ == "__main__":
     # Prometheus HTTP 서버 시작
-    start_http_server(8000)  # Prometheus는 http://localhost:8000/metrics 에서 데이터를 가져감
-    print("Prometheus Exporter Running on Port 8000...")
+    port = int(os.getenv("PORT", 8000))
+    start_http_server(port)  # Prometheus는 http://localhost:8000/metrics 에서 데이터를 가져감
+    print("Prometheus Exporter Running on Port...")
 
     # 주기적으로 메트릭 데이터 업데이트
     while True:
