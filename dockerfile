@@ -13,4 +13,5 @@ ENV SECRET_KEY="secret_key"
 ENV APP_KEY="app_key"
 ENV RDS_ID="rds_id"
 
-CMD ["python", "prometheus_rds.py"]
+# CMD ["python", "prometheus_rds.py"]
+CMD ["python", "prometheus_rds_postgresql.py"]
