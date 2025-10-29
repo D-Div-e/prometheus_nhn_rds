@@ -10,8 +10,8 @@ docker build --platform linux/amd64 -t prometheus_nhn_rds_<port> .
 # Docker Ops.
 docker run -d \
   -e ACCESS_KEY="" \
-  -e SECRET_KEY= "" \
-  -e APP_KEY= "" \
+  -e SECRET_KEY="" \
+  -e APP_KEY="" \
   -e RDS_ID="" \
   -e PORT= \
   -p: \
